@@ -1,0 +1,84 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	
+	<ui:style>
+		.container {
+			z-index: 100;
+			position: fixed;
+			bottom: 0;
+			right: 3em;
+			padding: 0.25em 1em;
+			background-color: black;
+			box-shadow: 0 0 2em white;
+			border-top-left-radius: 0.5em;
+			border-top-right-radius: 0.5em;
+		}
+		
+		.container:hover {
+			box-shadow: 0 0 3em white;
+		}
+	
+		.header {
+			text-align: right;
+			cursor: pointer;
+		}
+	
+		.titleCell {
+			vertical-align: top;
+		}
+
+		.messageTextArea {
+			width: 20em;
+			height: 10em;
+			resize: none;
+		}
+		
+		.buttonContainer {
+			text-align: right;
+		}
+		
+		.sendButton {
+			background-color: red !important;
+		}
+	</ui:style>
+	
+	<g:HTMLPanel styleName="{style.container}">
+		<g:Label text="Feedback" styleName="{style.header}" ui:field="btnFeedback" />
+		<g:HTMLPanel ui:field="form">
+			<g:Grid>
+				<g:row>
+					<g:cell>
+						Von:
+					</g:cell>
+					<g:customCell>
+						<g:TextBox ui:field="email" width="20em" enabled="false" />
+					</g:customCell>
+				</g:row>
+				<g:row>
+					<g:cell>
+						An:
+					</g:cell>
+					<g:customCell>
+						<g:TextBox text="bennyseber@gmail.com" width="20em" enabled="false" />
+					</g:customCell>
+				</g:row>
+				<g:row>
+					<g:cell styleName="{style.titleCell}">
+						Nachricht:
+					</g:cell>
+					<g:customCell>
+						<g:ScrollPanel>
+							<g:TextArea ui:field="message" styleName="{style.messageTextArea}" />
+						</g:ScrollPanel>
+					</g:customCell>
+				</g:row>
+			</g:Grid>
+			<g:HTMLPanel styleName="{style.buttonContainer}">
+				<g:Button text="Abbrechen" ui:field="btnCancel" />
+				<g:Button text="Senden" ui:field="btnSend" styleName="gwt-Button {style.sendButton}" />
+			</g:HTMLPanel>
+		</g:HTMLPanel>
+	</g:HTMLPanel>
+	
+</ui:UiBinder> 

@@ -1,0 +1,50 @@
+@def topColor #333;
+@def lowerColor #5E5E5E;
+
+.cellListWidget {
+	border-radius: 0.3em;
+	background-color: #474A4C;
+}
+
+.cellListEvenItem:hover,.cellListOddItem:hover {
+	background-color: rgba(160, 160, 160, 0.1);
+}
+
+.cellListEvenItem:first-child {
+	border-top: 1px solid transparent;
+}
+
+.cellListEvenItem {
+	position: relative;
+	zoom: 1;
+	padding: 1em;
+	border-top: 1px solid lowerColor;
+	border-bottom: 1px solid topColor;
+	cursor: pointer;
+	cursor: pointer;
+}
+
+.cellListOddItem:last-child {
+	border-bottom: 1px solid transparent;
+}
+
+.cellListOddItem {
+	position: relative;
+	zoom: 1;
+	padding: 1em;
+	border-top: 1px solid lowerColor;
+	border-bottom: 1px solid topColor;
+	cursor: pointer;
+}
+
+.cellListKeyboardSelectedItem {
+	
+}
+
+.cellListSelectedItem {
+	
+}
+
+.cellListItem-content {
+	position: relative;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:de.fubatra.archiv.client.ui.widgets">
+	
+	 <ui:style>
+	 	.container {
+			background-color: rgba(0, 0, 0, 0.2);
+		}
+	 
+		.container input[type=text] {
+			padding: 1px 0 !important;
+			width: 100%;
+		}
+		
+		.container select {
+			width: 100%;
+		}
+	
+		.buttonContainer {
+			text-align: right;
+		}
+	 </ui:style>
+	 
+	 <g:SimplePanel styleName="{style.container}">
+		<g:Grid ui:field="grid">
+			<g:row>
+				<g:customCell>
+					<w:EditableLabel ui:field="season" />
+				</g:customCell>
+				<g:customCell>
+					<w:EditableLabel ui:field="club" />
+				</g:customCell>
+				<g:customCell>
+					<w:EditableTeamListBox ui:field="team" />
+				</g:customCell>
+				<g:customCell>
+					<g:FlowPanel ui:field="buttonContainer" styleName="{style.buttonContainer}" />
+				</g:customCell>
+			</g:row>
+		</g:Grid>
+	 </g:SimplePanel>
+	
+	
+</ui:UiBinder> 

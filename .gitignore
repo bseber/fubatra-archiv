@@ -1,0 +1,16 @@
+.apt_generated/
+.gwt/
+.settings/
+
+GWT_TOOLS/
+
+src/main/gwt-unitCache/
+src/main/webapp/fubatraarchiv/
+src/main/webapp/WEB-INF/appengine-generated/
+src/main/webapp/WEB-INF/classes/
+src/main/webapp/WEB-INF/deploy/
+src/main/webapp/WEB-INF/lib/
+
+.classpath
+.factorypath
+.project

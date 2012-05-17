@@ -1,0 +1,85 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client"
+	xmlns:w="urn:import:de.fubatra.archiv.client.ui.widgets.filter">
+	
+	<ui:style>
+		.west {
+			float: left;
+			width: 20em;
+		}
+		
+		.center {
+			padding-left: 20em;
+		}
+		
+		.separator {
+			height: 0.5em;
+		}
+		
+		.horizontalSeparator {
+			width: 2em;
+		}
+		
+		.sortContainer {
+			float: right;
+			margin-bottom: 1em;
+		}
+		
+		.label {
+			line-height: 2em;
+		}
+		
+		.pagerContainer {
+			margin: 1em 0;
+			float: right;
+		}
+	</ui:style>
+	
+	<g:HTMLPanel>
+		<g:HTMLPanel ui:field="wrapper" styleName="clearfix">
+			<g:HTMLPanel ui:field="west" styleName="{style.west}">
+				<g:DisclosurePanel open="true" animationEnabled="true">
+					<g:header>Altersgruppe</g:header>
+					<w:TeamFilter ui:field="teams" />
+				</g:DisclosurePanel>
+				<g:HTMLPanel styleName="{style.separator}"></g:HTMLPanel>
+				<g:DisclosurePanel open="true" animationEnabled="true">
+					<g:header>Thema</g:header>
+					<w:TrainingSessionSubjectFilter ui:field="subjects" />
+				</g:DisclosurePanel>
+			</g:HTMLPanel>
+			<g:HTMLPanel ui:field="center" styleName="{style.center}">
+				<g:VerticalPanel width="100%">
+					<g:HorizontalPanel styleName="{style.sortContainer}">
+						<g:Label text="Sortieren:" styleName="{style.label}"></g:Label>
+						<g:ListBox ui:field="listBoxSortByItem">
+							<g:item value="CREATION_DATE">Neuste</g:item>
+							<g:item value="RATING">Beste Bewertung</g:item>
+							<g:item value="RATING_COUNT">Anzahl Bewertungen</g:item>
+						</g:ListBox>
+						<g:Label styleName="{style.horizontalSeparator}"></g:Label>
+						<g:Label text="Anzahl pro Seite:" styleName="{style.label}"></g:Label>
+						<g:ListBox ui:field="lbVisibleItems">
+							<g:item>2</g:item>
+							<g:item>3</g:item>
+							<g:item>4</g:item>
+							<g:item>5</g:item>
+							<g:item>6</g:item>
+							<g:item>7</g:item>
+							<g:item>8</g:item>
+							<g:item>9</g:item>
+							<g:item>10</g:item>
+						</g:ListBox>
+					</g:HorizontalPanel>
+					<c:CellList ui:field="sessionList" />
+					<g:HTMLPanel styleName="{style.pagerContainer}">
+						<c:SimplePager ui:field="pager" />
+					</g:HTMLPanel>
+				</g:VerticalPanel>
+			</g:HTMLPanel>
+		</g:HTMLPanel>
+	</g:HTMLPanel>
+	
+</ui:UiBinder> 

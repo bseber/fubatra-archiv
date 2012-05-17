@@ -1,0 +1,141 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client"
+	xmlns:w="urn:import:de.fubatra.archiv.client.ui.widgets">
+	
+	<ui:with type="de.fubatra.archiv.client.ui.resources.AppResources" field="res"></ui:with>
+	
+	<ui:style>
+		.center {
+			/* inline-block to be able to calc the div's width*/
+			display: inline-block;
+			margin-bottom: 2em;
+		}
+		
+		.east {
+			/* inline-block to be able to calc the div's width*/
+			display: inline-block;
+		}
+		
+		.pictureContainer {
+			float: left;
+			padding-right: 2em;
+		}
+	
+		.userInfoContainer {
+			float: left;
+			padding-left: 2em;
+		}
+
+		.profileIcon {
+			cursor: pointer;	
+		}
+		
+		.picture {
+			border: 0.25em solid white;
+			cursor: pointer;
+		}
+		
+		.row {
+			margin-bottom: 1em;
+		}
+		
+		.inputField input[type=text] {
+			width: 20em;
+		}
+		
+		.inputLabel {
+			padding: 5px 4px;
+		}
+		
+		.teamSelector {
+			padding: 4px 3px;
+			width: 20.75em;
+		}
+		
+		.seasonHistory {
+			margin-top: 2em;
+		}
+		
+		.bestRatedContainer {
+			margin-bottom: 2em;
+		}
+		
+		.seasonHeader {
+			width: 7em;
+		}
+		
+	 	.clubHeader {
+			width: 20em;
+		}
+		
+	 	.teamHeader {
+			width: 10em;
+		}
+		
+		.editorContainer {
+			border-top: 2px solid red;
+		}
+		
+		.seasonHistoryContainer {
+			margin: 1em 0;
+		}
+		
+		.seasonHistoryButtonContainer {
+			margin: 1em 0;
+		}
+	</ui:style>
+	
+	<g:HTMLPanel ui:field="containerPanel">
+		<g:HTMLPanel styleName="{style.center}" ui:field="centerPanel">
+			<h1>Profil</h1>
+			<g:HTMLPanel styleName="clearfix">
+				<g:HTMLPanel ui:field="pictureContainer" styleName="{style.pictureContainer}">
+					<w:PictureEditor ui:field="picture" styleName="{style.picture}" />
+				</g:HTMLPanel>
+				<g:HTMLPanel ui:field="inputContainer" styleName="{style.userInfoContainer}">
+					<g:HTMLPanel styleName="{style.row}">
+						<g:Label text="Name" />
+						<w:EditableLabel ui:field="name" styleName="{style.inputField}" />
+					</g:HTMLPanel>
+					<g:HTMLPanel styleName="{style.row}">
+						<g:Label text="Google+" />
+						<w:EditableAnchor ui:field="googlePlusUrl" styleName="{style.inputField}" />
+					</g:HTMLPanel>
+					<g:HTMLPanel styleName="{style.row}">
+						<g:Label text="Facebook" />
+						<w:EditableAnchor ui:field="facebookUrl" styleName="{style.inputField}" />
+					</g:HTMLPanel>
+				</g:HTMLPanel>
+			</g:HTMLPanel>
+			<g:HTMLPanel styleName="{style.seasonHistoryContainer}">
+				<h1>Trainerstationen</h1>
+			 	<g:Grid>
+			 		<g:row>
+			 			<g:customCell styleName="{style.seasonHeader}">
+			 				<g:Label text="Saison" />
+			 			</g:customCell>
+			 			<g:customCell styleName="{style.clubHeader}">
+			 				<g:Label text="Verein" />
+			 			</g:customCell>
+			 			<g:customCell styleName="{style.teamHeader}">
+			 				<g:Label text="Team" />
+			 			</g:customCell>
+			 		</g:row>
+			 	</g:Grid>
+			 	<g:FlowPanel ui:field="seasonHistoryEditorContainer" styleName="{style.editorContainer}" />
+		 		<g:FlowPanel ui:field="seasonHistoryButtonContainer" styleName="{style.seasonHistoryButtonContainer}" />
+			</g:HTMLPanel>
+		</g:HTMLPanel>
+		<g:HTMLPanel styleName="{style.east}" ui:field="eastPanel">
+			<g:HTMLPanel ui:field="eastInnerPanel">
+				<h1>Best bewertet</h1>
+				<g:SimplePanel ui:field="bestRatedContainer" styleName="{style.bestRatedContainer}" />
+				<h1>Zuletzt veröffentlicht</h1>
+				<g:SimplePanel ui:field="usersRecentAddedContainer" />
+			</g:HTMLPanel>
+		</g:HTMLPanel>
+	</g:HTMLPanel>
+	
+</ui:UiBinder> 

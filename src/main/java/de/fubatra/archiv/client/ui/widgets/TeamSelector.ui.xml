@@ -1,0 +1,21 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
+	<ui:style>
+		.checkbox {
+			display: block;
+		}
+	</ui:style>
+
+	<g:HTMLPanel>
+		<g:CheckBox ui:field="btnSeniors" text="Senioren" styleName="{style.checkbox}" />
+		<g:CheckBox ui:field="btnAjun" text="A-Junioren" styleName="{style.checkbox}" />
+		<g:CheckBox ui:field="btnBjun" text="B-Junioren" styleName="{style.checkbox}" />
+		<g:CheckBox ui:field="btnCjun" text="C-Junioren" styleName="{style.checkbox}" />
+		<g:CheckBox ui:field="btnDjun" text="D-Junioren" styleName="{style.checkbox}" />
+		<g:CheckBox ui:field="btnEjun" text="E-Junioren" styleName="{style.checkbox}" />
+		<g:CheckBox ui:field="btnFjun" text="F-Junioren" styleName="{style.checkbox}" />
+	</g:HTMLPanel>
+
+</ui:UiBinder> 

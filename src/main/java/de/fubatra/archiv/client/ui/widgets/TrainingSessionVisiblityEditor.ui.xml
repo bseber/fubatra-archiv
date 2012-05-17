@@ -1,0 +1,16 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	
+	<ui:style>
+		.radioButton {
+			display: block;
+		}
+	</ui:style>
+	
+	<g:HTMLPanel>
+		<g:RadioButton ui:field="btnPublic" text="Öffentlich" name="visibility" styleName="{style.radioButton}" />
+		<g:RadioButton ui:field="btnPrivate" text="Privat" name="visibility" styleName="{style.radioButton}" />
+	</g:HTMLPanel>
+	
+</ui:UiBinder> 

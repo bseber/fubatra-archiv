@@ -1,0 +1,33 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:de.fubatra.archiv.client.ui.widgets">
+	
+	<ui:style>
+		.container {
+			position: relative;
+			height: 100%;
+			text-align: center;
+		}
+		
+		.editButton {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			font-size: 1.33em;
+			padding: 1em;
+			background-color: rgba(0, 0, 0, 0.3);
+		}
+		
+	</ui:style>
+	
+	<g:HTMLPanel>
+		<g:HTMLPanel styleName="{style.container}">
+			<g:Label ui:field="btnEdit" text="Bild ändern" styleName="{style.editButton}" />
+			<w:ImageWidget ui:field="image" />
+			<g:TextBox ui:field="blobKey" visible="false" />
+		</g:HTMLPanel>
+	</g:HTMLPanel>
+	
+</ui:UiBinder> 

@@ -1,0 +1,64 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:de.fubatra.archiv.client.ui.widgets">
+	
+	<ui:style>
+		.closeButton {
+			text-align: right;
+			padding-right: 0.5em;
+			cursor: pointer;
+			font-weight: bold;
+		}
+		
+		.closeButton:hover {
+			color: white;
+		}
+		
+		.content {
+		}
+		
+		.formPanel {
+			position: relative;
+			text-align: center;
+		}
+		
+		.buttonPanel {
+			float: right;
+		}
+		
+		.saveButton {
+			background-color: red !important;
+		}
+	</ui:style>
+
+	<g:DockLayoutPanel unit="EM" width="800px" height="450px">
+		<g:north size="1">
+			<g:Label ui:field="btnClose" text="x" styleName="{style.closeButton}" />
+		</g:north>
+		<g:south size="4">
+			<g:SimplePanel>
+				<g:HorizontalPanel spacing="4" styleName="{style.buttonPanel}">
+					<g:cell>
+						<g:Button ui:field="btnCancel" text="Abbrechen" />
+					</g:cell>
+					<g:cell>
+						<g:Button ui:field="btnSave" text="Als Profilfoto festlegen" styleName="gwt-Button {style.saveButton}" />
+					</g:cell>
+				</g:HorizontalPanel>
+			</g:SimplePanel>
+		</g:south>
+		<g:center>
+			<g:FormPanel ui:field="formPanel" styleName="{style.formPanel}">
+				<g:HTMLPanel>
+						<g:FileUpload ui:field="fileUpload" />
+					<g:TextBox ui:field="tbBlobKey" visible="false" />
+					<g:HTMLPanel>
+						<w:ImageWidget ui:field="picture" />
+					</g:HTMLPanel>
+				</g:HTMLPanel>
+			</g:FormPanel>
+		</g:center>
+	</g:DockLayoutPanel>	
+	
+</ui:UiBinder> 

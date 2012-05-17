@@ -1,0 +1,24 @@
+body{background-color:#272B2E !important;color:#999 !important;}
+div::-webkit-scrollbar {width: 1em;}
+div::-webkit-scrollbar-thumb {background-color: #535353;}
+a{color:red !important;font-weight:bold;}
+h1 {color:#5F5F5F;text-transform:uppercase;}
+h2, h3 {color:white;text-shadow:1px 1px black;}
+.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+.gwt-Hyperlink{display:inline-block;}
+.gwt-DisclosurePanel {width: 100%;padding: 0.5em;border-radius: 0.4em;color: #BDBDBD;}
+.gwt-DisclosurePanel .header, .gwt-DisclosurePanel .header a, .gwt-DisclosurePanel .header td {color:#A7A7A7 !important;}
+.gwt-RichTextArea {background-color:white;width:100%;}
+.gwt-PopupPanel{border-color:black !important;border-radius:0.5em;box-shadow:0 0 2em white;background-color:black !important}
+.gwt-Button {
+	padding: 1em !important;
+	background: #141414 !important;
+	color: white;
+	border: 1px solid #0F0F0F !important;
+	border-radius: 0.3em !important;
+}
+
+.gwt-Button:hover {
+	box-shadow: 0 0 0.5em #A7A7A7;
+	border-color: black;
+}

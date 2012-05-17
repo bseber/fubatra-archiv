@@ -1,1 +1,21 @@
-Hello World
+Fubatra-Archiv
+==============
+
+Fubatra-Archiv is a web application to administrate your football training sessions.
+
+* publish your training sessions so everyone can see it, or leave it private
+* filter all public training sessions for agegroups and specific topics
+* rate and comment public training sessions
+
+## Technologies
+
+* Google App Engine
+* Google Web Toolkit
+ * Request Factory
+ * Editor Framework
+* [mvp4g](http://code.google.com/p/mvp4g/) - a Model-View-Presenter Framework
+* [objectify-appengine](http://code.google.com/p/objectify-appengine/) - a Google App Engine datastore API
+
+## Licence
+
+*Fubatra-Archiv* is licenced under the [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)

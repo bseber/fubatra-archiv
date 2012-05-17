@@ -1,0 +1,19 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	
+	<ui:style>
+	</ui:style>
+
+	<g:VerticalPanel width="100%">
+		<g:RadioButton name="team" ui:field="btnAll" text="Alle" checked="true" />
+		<g:RadioButton name="team" ui:field="btnSeniors" text="Senioren" />
+		<g:RadioButton name="team" ui:field="btnAJun" text="A-Junioren" />
+		<g:RadioButton name="team" ui:field="btnBJun" text="B-Junioren" />
+		<g:RadioButton name="team" ui:field="btnCJun" text="C-Junioren" />
+		<g:RadioButton name="team" ui:field="btnDJun" text="D-Junioren" />
+		<g:RadioButton name="team" ui:field="btnEJun" text="E-Junioren" />
+		<g:RadioButton name="team" ui:field="btnFJun" text="F-Junioren" />
+	</g:VerticalPanel>
+	
+</ui:UiBinder> 

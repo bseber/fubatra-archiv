@@ -1,0 +1,85 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:d="urn:import:com.google.gwt.user.datepicker.client"
+	xmlns:v="urn:import:de.fubatra.archiv.client.ui.view"
+	xmlns:w="urn:import:de.fubatra.archiv.client.ui.widgets">
+
+	<ui:style>
+		.descriptionContainer {
+			background-color: white;
+			border: 1px inset;
+		}
+		
+		.buttonContainer {
+			margin-top: 1em;
+		}
+		
+		.row {
+			padding: 1em;
+			border-top: 1px solid #3F3F3F;
+			border-bottom: 1px solid #1A1A1A;
+		}
+
+		.firstrow {
+			padding: 1em;
+			border-bottom: 1px solid #1A1A1A;
+		}
+
+		.lastrow {
+			padding: 1em;
+			border-top: 1px solid #3F3F3F;
+		}
+		
+		.column {
+			float: left;
+			margin-right: 5em;
+		}
+		
+		.saveButton {
+			float: left;
+			margin-right: 1em;
+		}
+	</ui:style>
+	
+	<g:HTMLPanel>
+		<g:TextBox ui:field="draftBlobKey" visible="false" />
+		<g:HTMLPanel styleName="{style.firstrow} clearfix">
+			<h2>Titel der Trainingseinheit</h2>
+			<g:TextBox ui:field="topic" width="25em" />
+		</g:HTMLPanel>
+		<g:HTMLPanel styleName="{style.row} clearfix">
+			<g:HTMLPanel styleName="{style.column}">
+				<h2>Sichtbarkeit</h2>
+				<w:TrainingSessionVisiblityEditor ui:field="visibility" />
+			</g:HTMLPanel>
+			<g:HTMLPanel styleName="{style.column}">
+				<h2>Altersgruppe</h2>
+				<w:TeamSelector ui:field="teams" />
+			</g:HTMLPanel>
+			<g:HTMLPanel styleName="{style.column}">
+				<h2>Thema</h2>
+				<w:TrainingSessionSubjectsEditor ui:field="subjects" />
+			</g:HTMLPanel>
+		</g:HTMLPanel>
+		<g:HTMLPanel styleName="{style.row}">
+			<h2>Skizze</h2>
+			<g:FormPanel ui:field="formPanel">
+				<g:HTMLPanel>
+					<g:FileUpload ui:field="fileUpload" />
+				</g:HTMLPanel>
+			</g:FormPanel>
+			<w:ImageWidget ui:field="draftUrl" />
+		</g:HTMLPanel>
+		<g:HTMLPanel styleName="{style.lastrow}">
+			<h2>Beschreibung</h2>
+			<g:SimplePanel styleName="{style.descriptionContainer}">
+				<g:VerticalPanel ui:field="descriptionContainer" width="100%" />
+			</g:SimplePanel>
+		</g:HTMLPanel>
+		<g:HTMLPanel styleName="{style.buttonContainer}" ui:field="saveButtonContainer">
+			<g:Button ui:field="btnSave" text="Speichern" styleName="gwt-Button {style.saveButton}" />
+		</g:HTMLPanel>
+	</g:HTMLPanel>
+	
+</ui:UiBinder> 

@@ -1,0 +1,49 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
+	<ui:style>
+		.cell {
+			vertical-align: top;
+			padding-right: 3em;
+		}
+	</ui:style>
+
+	<g:Grid>
+		<g:row>
+			<g:customCell styleName="{style.cell}">
+				<g:VerticalPanel width="100%">
+					<g:CheckBox ui:field="ballControl" text="Ballmitnahme" />
+					<g:CheckBox ui:field="dribbling" text="Dribbling" />
+					<g:CheckBox ui:field="feints" text="Finten" />
+					<g:CheckBox ui:field="header" text="Kopfball" />
+					<g:CheckBox ui:field="passing" text="Passspiel" />
+					<g:CheckBox ui:field="shooting" text="Torschuss" />
+				</g:VerticalPanel>
+			</g:customCell>
+			<g:customCell styleName="{style.cell}">
+				<g:VerticalPanel width="100%">
+					<g:CheckBox ui:field="stamina" text="Ausdauer" />
+					<g:CheckBox ui:field="coordination" text="Koordination" />
+					<g:CheckBox ui:field="power" text="Kraft" />
+					<g:CheckBox ui:field="speed" text="Schnelligkeit" />
+				</g:VerticalPanel>
+			</g:customCell>
+			<g:customCell styleName="{style.cell}">
+				<g:VerticalPanel width="100%">
+					<g:CheckBox ui:field="offInd" text="Angriff Individualtaktik" />
+					<g:CheckBox ui:field="offGroup" text="Angriff Gruppentaktik" />
+					<g:CheckBox ui:field="offTeam" text="Angriff Mannschaftstaktik" />
+				</g:VerticalPanel>
+			</g:customCell>
+			<g:customCell styleName="{style.cell}">
+				<g:VerticalPanel width="100%">
+					<g:CheckBox ui:field="defInd" text="Abwehr Individualtaktik" />
+					<g:CheckBox ui:field="defGroup" text="Abwehr Gruppentaktik" />
+					<g:CheckBox ui:field="defTeam" text="Abwehr Mannschaftstaktik" />
+				</g:VerticalPanel>
+			</g:customCell>
+		</g:row>
+	</g:Grid>
+
+</ui:UiBinder> 

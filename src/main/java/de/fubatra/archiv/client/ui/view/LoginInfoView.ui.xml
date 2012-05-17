@@ -1,0 +1,61 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	
+	<ui:style>
+		.container {
+			text-align: center;
+		}
+		
+		.container p {
+			font-size: 1.25em;	
+			margin-bottom: 2em;
+		}
+	
+		.buttonContainer {
+			margin: 2em 0;
+		}
+		
+		.loginButton {
+			padding: 1em;
+			border-radius: 0.3em;
+			border: 1px sopd #0F0F0F;
+			border-top-color: #222;
+			background-color: #141414;
+			color: #C4C4C4 !important;
+		}
+		
+		.loginButton:hover {
+			text-decoration: none;
+			border-color: black;
+			box-shadow: 0 0 0.5em #A7A7A7;
+		}
+	</ui:style>
+	
+	<g:HTMLPanel styleName="{style.container}">
+		<p>
+			<span style="font-weight:bold;font-size:1.2em;">Fubatra-Archiv befindet sich noch in der Testphase.</span>
+		</p>
+		<p>
+			Wenn etwas nicht wie erwartet funktioniert, bitte nicht scheuen das Feedback Formular zu benutzen ;-)
+		</p>
+		<p>
+			Das Einloggen ist momentan nur mit einem Google-Konto m&ouml;glich.
+		</p>
+		<p>
+			Deine E-Mail Adresse (verkn&uuml;pft mit dem Google Konto)<br />
+			ist nur dir ersichtlich und wird nicht ver&ouml;ffentlicht.
+		</p>
+		<p>
+			Nach dem erstmaligen Einloggen wird automatisch ein Account angelegt<br />
+			und du wirst gebeten einen Benutzernamen einzugeben.
+		</p>
+		<p>
+			Das L&ouml;schen des Accounts wird <span style="text-decoration:line-through;">noch</span> nicht unterstützt!!
+		</p>
+		<g:HTMLPanel styleName="{style.buttonContainer}">
+			<g:Anchor ui:field="btnLogin" styleName="{style.loginButton}" text="Einverstanden, einloggen" />
+		</g:HTMLPanel>
+	</g:HTMLPanel>
+	
+</ui:UiBinder> 

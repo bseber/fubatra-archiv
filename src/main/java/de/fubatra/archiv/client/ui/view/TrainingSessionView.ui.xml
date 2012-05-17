@@ -1,0 +1,197 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client"
+	xmlns:v="urn:import:de.fubatra.archiv.client.ui.view"
+	xmlns:w="urn:import:de.fubatra.archiv.client.ui.widgets">
+
+	<ui:with type="de.fubatra.archiv.client.ui.resources.AppResources" field="res"></ui:with>
+	
+	<ui:style>
+		.east {
+			width: 30em;
+		}
+		
+		.image {
+			max-width: 800px;
+		}
+		
+		.commentTxt textarea {
+			width: 27em;
+			resize: none;
+		}
+		
+		.horizontalSeparator {
+			width: 1em;
+		}
+		
+		.teamRow {
+			padding-top: 1em;
+		}
+		
+		.ratingBar {
+			position: relative;
+			width: 10em;
+			height: 1em;
+			background-color: gray;
+		}
+		
+		.ratingBar > div {
+			height: 1em;
+			width: 0px;
+			background-color: orange;
+		}
+		
+		.avgRatingContainer {
+			padding-left: 2em;
+			text-align: center;
+		}
+		
+		.statistic {
+			margin-bottom: 1em;
+		}
+		
+		.ownerLink {
+			cursor: pointer;
+		}
+		
+		.ownerLink:hover {
+			text-decoration: underline;
+		}
+	</ui:style>
+	
+	<g:HTMLPanel ui:field="containerPanel">
+	
+		<g:VerticalPanel ui:field="centerPanel">
+			<g:HTMLPanel ui:field="ownerActionsContainer" />
+			<g:HTMLPanel>
+				<h2 ui:field="title"></h2>
+			</g:HTMLPanel>
+			<g:HTMLPanel styleName="{style.statistic}">
+				<g:Grid>
+					<g:row>
+						<g:customCell>
+							<g:Grid>
+								<g:row>
+									<g:customCell>
+										<g:InlineLabel text="4 Sterne" />
+									</g:customCell>
+									<g:customCell>
+										<g:SimplePanel styleName="{style.ratingBar}">
+											<g:SimplePanel ui:field="awesomeRatingBar" />
+										</g:SimplePanel>
+									</g:customCell>
+									<g:customCell>
+										<g:SimplePanel ui:field="awesomeRatingCountContainer"></g:SimplePanel>
+									</g:customCell>
+								</g:row>
+								<g:row>
+									<g:customCell>
+										<g:InlineLabel text="3 Sterne" />
+									</g:customCell>
+									<g:customCell>
+										<g:SimplePanel styleName="{style.ratingBar}">
+											<g:SimplePanel ui:field="superRatingBar" />
+										</g:SimplePanel>
+									</g:customCell>
+									<g:customCell>
+										<g:SimplePanel ui:field="superRatingCountContainer"></g:SimplePanel>
+									</g:customCell>
+								</g:row>
+								<g:row>
+									<g:customCell>
+										<g:InlineLabel text="2 Sterne" />
+									</g:customCell>
+									<g:customCell>
+										<g:SimplePanel styleName="{style.ratingBar}">
+											<g:SimplePanel ui:field="goodRatingBar" />
+										</g:SimplePanel>
+									</g:customCell>
+									<g:customCell>
+										<g:SimplePanel ui:field="goodRatingCountContainer"></g:SimplePanel>
+									</g:customCell>
+								</g:row>
+								<g:row>
+									<g:customCell>
+										<g:InlineLabel text="1 Stern" />
+									</g:customCell>
+									<g:customCell>
+										<g:SimplePanel styleName="{style.ratingBar}">
+											<g:SimplePanel ui:field="badRatingBar" />
+										</g:SimplePanel>
+									</g:customCell>
+									<g:customCell>
+										<g:SimplePanel ui:field="badRatingCountContainer"></g:SimplePanel>
+									</g:customCell>
+								</g:row>
+							</g:Grid>
+						</g:customCell>
+						<g:customCell>
+							<g:HTMLPanel styleName="{style.avgRatingContainer}">
+								<h3 style="margin:0;">Durchschnittliche Bewertung</h3>
+								<w:RatingWidget ui:field="averageRating" />
+								<g:SimplePanel ui:field="ratingCountContainer" />
+							</g:HTMLPanel>
+						</g:customCell>
+					</g:row>
+				</g:Grid>
+			</g:HTMLPanel>
+			<g:HTMLPanel>
+				<g:Grid>
+					<g:row>
+						<g:customCell>
+							<g:Label text="Erstellt von:" />
+						</g:customCell>
+						<g:customCell>
+							<g:Label ui:field="ownerDisplayName" styleName="{style.ownerLink}" />
+						</g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell>
+							<g:Label text="Erstellt am:" />
+						</g:customCell>
+						<g:customCell>
+							<g:DateLabel ui:field="creationDate" />
+						</g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell styleName="{style.teamRow}">
+							<g:Label text="Altersgruppen:" />
+						</g:customCell>
+						<g:customCell styleName="{style.teamRow}">
+							<g:SimplePanel ui:field="teamsLabelContainer" />
+						</g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell>
+							<g:Label text="Thema:" />
+						</g:customCell>
+						<g:customCell>
+							<g:SimplePanel ui:field="subjectsLabelContainer" />
+						</g:customCell>
+					</g:row>
+				</g:Grid>
+			</g:HTMLPanel>
+			<g:HTMLPanel>
+				<h2>Skizze</h2>
+				<w:ImageWidget ui:field="draft" styleName="{style.image}" />
+				<h2>Beschreibung</h2>
+				<w:HTMLLabel ui:field="description" />
+			</g:HTMLPanel>
+		</g:VerticalPanel>
+		
+		<g:HTMLPanel styleName="{style.east}" ui:field="eastPanel">
+			<g:HTMLPanel ui:field="eastInnerPanel">
+				<g:HTMLPanel>
+					<h2>Trainingseinheit Bewerten</h2>
+					<g:SimplePanel ui:field="ratingContainer" />
+				</g:HTMLPanel>
+				<g:HTMLPanel ui:field="commentWrapper" styleName="{style.commentTxt}" />
+				<h2>Kommentare</h2>
+				<v:TrainingSessionPostListView ui:field="posts" />
+			</g:HTMLPanel>
+		</g:HTMLPanel>
+	
+	</g:HTMLPanel>
+	
+</ui:UiBinder> 

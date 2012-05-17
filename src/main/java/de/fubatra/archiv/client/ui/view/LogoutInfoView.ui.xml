@@ -1,0 +1,45 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	
+	<ui:style>
+		.container {
+			text-align: center;
+		}
+		
+		.container p {
+			font-size: 1.25em;	
+			margin-bottom: 2em;
+		}
+		
+		.buttonContainer {
+			margin: 2em 0;
+		}
+		
+		.logoutButton {
+			padding: 1em;
+			border-radius: 0.3em;
+			border: 1px sopd #0F0F0F;
+			border-top-color: #222;
+			background-color: #141414;
+			color: #C4C4C4 !important;
+		}
+		
+		.logoutButton:hover {
+			text-decoration: none;
+			border-color: black;
+			box-shadow: 0 0 0.5em #A7A7A7;
+		}
+	</ui:style>
+	
+	<g:HTMLPanel styleName="{style.container}">
+		<p>
+			Du wirst damit aus deinem Google-Konto ausgeloggt.<br />
+			Eigentlich nur n&ouml;tig, wenn du dich auf einem fremden Rechner befindest.
+		</p>
+		<g:HTMLPanel styleName="{style.buttonContainer}">
+			<g:Anchor ui:field="btnLogout" styleName="{style.logoutButton}" text="Ausloggen" />
+		</g:HTMLPanel>
+	</g:HTMLPanel>
+	
+</ui:UiBinder> 
